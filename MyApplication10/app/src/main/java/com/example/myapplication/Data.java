@@ -1,35 +1,25 @@
 package com.example.myapplication;
 
 public class Data {
-
-    private String mPlaceName;
-
-    private String mPlacedetails;
-
-    private int mPlaceImageId = DEFAULT_ID;
-
-    private static final int DEFAULT_ID = -1;
+//Constructor to set up collection of dynamic data(place visited and description)
+    String title, description;
 
 
-    public Data(String placeName, String placeDetails, int placeImageId) {
-
-        mPlaceName = placeName;
-        mPlacedetails = placeDetails;
-        mPlaceImageId = placeImageId;
+    public Data() {
     }
 
-    public Data(String placeName, String placeDetails){
-        mPlaceName = placeName;
-        mPlacedetails = placeDetails;
+    public Data(String title, String description) {
+        this.title = title;
+        this.description = description;
+
     }
 
-    public String getPlaceName(){ return mPlaceName; }
+    public String getTitle() {
+        return title;
+    }
 
-    public String getPlacedetails(){ return mPlacedetails; }
-
-    public int getPlaceImageId(){ return mPlaceImageId; }
-
-    public boolean hasImage(){ return mPlaceImageId != DEFAULT_ID; }
-
+    public String getDescription() {
+        return description;
+    }
 
 }
